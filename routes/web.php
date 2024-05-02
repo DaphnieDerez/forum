@@ -13,9 +13,6 @@ Route::get('/', function () {
 // route to login form and logging in
 Route::get('/user', [UserController::class, 'loginForm'])->name('user.login');
 
-// routes for creating user
-Route::get('/user/create', [UserController::class, 'create'])->name('user.create');
-
 // route to forbidden
 Route::get('/users/forbidden', [UserController::class, 'goForbidden'])->name('user.forbidden');
 
