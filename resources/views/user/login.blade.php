@@ -16,7 +16,7 @@
             </div>
         @endif
         <div class="p-2">
-            <form action="" method="POST">
+            <form action="{{ route('auth.doLogin') }}" method="POST">
                 <div class=" d-flex align-items-center justify-content-center flex-column p-lg-5 bg-white rounded">
                     <div class="p-2">
                         <h1>Login</h1>

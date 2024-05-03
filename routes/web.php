@@ -12,6 +12,10 @@ Route::get('/', function () {
 // route to login form and logging in
 Route::get('/user', [UserController::class, 'loginForm'])->name('user.login');
 
+//auth controller routes for login and logout
+Route::post('login', [AuthController::class, 'doLogin'])->name('auth.doLogin');
+Route::get('logout', [AuthController::class, 'doLogout'])->name('auth.doLogout');
+
 // route to forbidden
 Route::get('/users/forbidden', [UserController::class, 'goForbidden'])->name('user.forbidden');
 
