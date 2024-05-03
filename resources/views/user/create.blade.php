@@ -16,9 +16,16 @@
 
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" aria-describedby="emailHelp"
                         placeholder="Enter email">
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                 </div>
+
+
 
                 <div class="form-group">
                     <label for="password">Password</label>

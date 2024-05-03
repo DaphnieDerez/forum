@@ -19,7 +19,7 @@
                 @foreach($posts as $post)
                     <tr>
                         <td>{{ $post->title }}</td>
-                        <td>{{ $post->user->name }}</td>
+                        <td>{{ $post->name }}</td>
                         <td>{{ $post->created_at->format('M d, Y H:i:s') }}</td>
                         <td>
                             <a href="{{ route('posts.show', $post->id) }}" class="btn btn-primary mr-2 btn-sm">View</a>
