@@ -12,6 +12,10 @@ class PostController extends Controller
         return view('posts.index', ['posts' => Post::all()]);
     }
 
+    public function create(){
+        return view('posts.create');
+    }
+
     public function store(Request $request){
         //create an instance of the Post model and save the data
         $post = new Post();

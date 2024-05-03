@@ -23,7 +23,7 @@ Route::post('/user', [UserController::class, 'store'])->name('user.store');
 
 // routes for posts crud
 Route::get('/posts', [PostController::class, 'index'])->name('posts.home');
-Route::get('/posts/create', [PostController::class, 'index'])->name('posts.create');
+Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 Route::get('/posts/show/{id}', [PostController::class, 'show'])->name('posts.show');
 Route::get('/posts/edit/{id}', [PostController::class, 'edit'])->name('posts.edit');
