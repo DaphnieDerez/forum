@@ -28,6 +28,18 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|confirmed|min:6'
+        ]);
+
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        return redirect()->route('user.login')->with('success', 'Account created.');
     }
 }

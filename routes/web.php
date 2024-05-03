@@ -15,6 +15,9 @@ Route::get('/user', [UserController::class, 'loginForm'])->name('user.login');
 // route to forbidden
 Route::get('/users/forbidden', [UserController::class, 'goForbidden'])->name('user.forbidden');
 
+// routes for creating user
+Route::get('/user/create', [UserController::class, 'create'])->name('user.create');
+Route::post('/user', [UserController::class, 'store'])->name('user.store');
 
 // routes for posts crud
 Route::get('/posts', [PostController::class, 'index'])->name('posts.home')->middleware('auth');
