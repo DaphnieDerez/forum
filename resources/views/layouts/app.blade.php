@@ -14,14 +14,14 @@
     <div class="container">
         <!-- the route('home') is used to redirect the user to the home page -->
         <!-- the home in the route is the name of the route in the routes.php file -->
-        <a class="navbar-brand" href="{{route('auth.doLogout')}}">Forum App</a>
+        <a class="navbar-brand" href="{{route('posts.home')}}">Forum App</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="">Logout</a>
+                    <a class="nav-link" href="{{route('auth.doLogout')}}">Logout</a>
                 </li>
             </ul>
         </div>
