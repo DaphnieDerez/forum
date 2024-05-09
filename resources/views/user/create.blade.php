@@ -16,8 +16,8 @@
 
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" aria-describedby="emailHelp"
-                        placeholder="Enter email">
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    
                         @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

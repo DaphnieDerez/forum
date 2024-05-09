@@ -15,6 +15,12 @@
                 <strong>{{ $message }}</strong>
             </div>
         @endif
+
+        <?php
+        
+        
+        ?>
+
         <div class="p-2">
             <form action="{{ route('auth.doLogin') }}" method="POST">
                 <div class=" d-flex align-items-center justify-content-center flex-column p-lg-5 bg-white rounded">

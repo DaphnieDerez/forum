@@ -21,7 +21,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('auth.doLogout')}}">Logout</a>
+                    <form action="{{route('auth.doLogout')}}" method="POST">
+                        @csrf
+                        <input type="submit" value="Logout">
+                    </form>
+                    
                 </li>
             </ul>
         </div>
